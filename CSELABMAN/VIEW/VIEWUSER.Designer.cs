@@ -46,7 +46,7 @@
             this.button_EDIT.Text = "SỬA THẺ NGƯỜI DÙNG";
             this.button_EDIT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_EDIT.UseVisualStyleBackColor = false;
-            this.button_EDIT.Click += new System.EventHandler(this.button1_Click);
+            this.button_EDIT.Click += new System.EventHandler(this.button_EDIT_Click);
             // 
             // button_REGIS
             // 
@@ -62,7 +62,7 @@
             this.button_REGIS.Text = "ĐĂNG KÝ NGƯỜI DÙNG ";
             this.button_REGIS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_REGIS.UseVisualStyleBackColor = false;
-            this.button_REGIS.Click += new System.EventHandler(this.button_USER_Click);
+            this.button_REGIS.Click += new System.EventHandler(this.button_REGIS_Click);
             // 
             // USER
             // 
@@ -73,6 +73,7 @@
             this.Controls.Add(this.button_REGIS);
             this.Name = "USER";
             this.Text = "QUẢN LÝ NGƯỜI DÙNG";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VIEWUSER_FormClosing);
             this.ResumeLayout(false);
 
         }

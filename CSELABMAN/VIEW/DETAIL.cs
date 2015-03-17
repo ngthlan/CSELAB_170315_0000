@@ -50,7 +50,7 @@ namespace CSELABMAN.VIEW
 
         private void button_Ver_Click(object sender, EventArgs e)
         {
-            richText_Stt.Text = "\n Sơ lược : Đây là đề tài LVTN HK142, được áp dụng thí điểm tại phòng thí nghiệm KTMT khi đang trong thời gian hiện thực và hoàn thiện"+
+            richText_Stt.Text = "\n\nTên phần mềm : \"QUẢN LÝ THẺ RFID - PHÒNG THÍ NGHIỆM KỸ THUẬT MÁY TÍNH\"" +
                                 "\n\n Phiên bản : Version 1.1.0.0"+
                                 "\n\n Tác giả : Nguyễn Thế Lân - Nguyễn Lê Khôi"+
                                 "\n\n Bản quyền thuộc về bộ môn KĨ THUẬT MÁY TÍNH, khoa KHOA HỌC VÀ KĨ THUẬT MÁY TÍNH, trường Đại học Bách Khoa TPHCM"+

@@ -31,9 +31,9 @@
             this.groupBox_infor = new System.Windows.Forms.GroupBox();
             this.lb_stt = new System.Windows.Forms.Label();
             this.textBox_UserName = new System.Windows.Forms.TextBox();
-            this.but_reset = new System.Windows.Forms.Button();
             this.label_UserName = new System.Windows.Forms.Label();
             this.label_RFID = new System.Windows.Forms.Label();
+            this.but_reset = new System.Windows.Forms.Button();
             this.group_SETTINGS = new System.Windows.Forms.GroupBox();
             this.cmB_Parity = new System.Windows.Forms.ComboBox();
             this.label_Parity = new System.Windows.Forms.Label();
@@ -82,15 +82,6 @@
             this.textBox_UserName.Size = new System.Drawing.Size(106, 20);
             this.textBox_UserName.TabIndex = 23;
             // 
-            // but_reset
-            // 
-            this.but_reset.Location = new System.Drawing.Point(264, 153);
-            this.but_reset.Name = "but_reset";
-            this.but_reset.Size = new System.Drawing.Size(95, 22);
-            this.but_reset.TabIndex = 16;
-            this.but_reset.Text = "Xóa thông tin";
-            this.but_reset.UseVisualStyleBackColor = true;
-            // 
             // label_UserName
             // 
             this.label_UserName.AutoSize = true;
@@ -108,6 +99,16 @@
             this.label_RFID.Size = new System.Drawing.Size(56, 13);
             this.label_RFID.TabIndex = 6;
             this.label_RFID.Text = "RFIDcode";
+            // 
+            // but_reset
+            // 
+            this.but_reset.Location = new System.Drawing.Point(264, 153);
+            this.but_reset.Name = "but_reset";
+            this.but_reset.Size = new System.Drawing.Size(95, 22);
+            this.but_reset.TabIndex = 16;
+            this.but_reset.Text = "Xóa thông tin";
+            this.but_reset.UseVisualStyleBackColor = true;
+            this.but_reset.Click += new System.EventHandler(this.but_reset_Click);
             // 
             // group_SETTINGS
             // 
@@ -197,6 +198,7 @@
             this.but_OpenPort.TabIndex = 25;
             this.but_OpenPort.Text = "Open Port";
             this.but_OpenPort.UseVisualStyleBackColor = true;
+            this.but_OpenPort.Click += new System.EventHandler(this.but_OpenPort_Click);
             // 
             // group_STT
             // 
@@ -254,6 +256,7 @@
             this.but_Regis.TabIndex = 34;
             this.but_Regis.Text = "SỬA";
             this.but_Regis.UseVisualStyleBackColor = true;
+            this.but_Regis.Click += new System.EventHandler(this.but_Regis_Click);
             // 
             // USEREDIT
             // 
@@ -268,6 +271,7 @@
             this.Controls.Add(this.groupBox_infor);
             this.Name = "USEREDIT";
             this.Text = "SỬA MÃ THẺ NGƯỜI DÙNG";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.USEREDIT_FormClosing);
             this.groupBox_infor.ResumeLayout(false);
             this.groupBox_infor.PerformLayout();
             this.group_SETTINGS.ResumeLayout(false);

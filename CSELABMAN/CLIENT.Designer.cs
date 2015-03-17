@@ -143,7 +143,7 @@
             this.Controls.Add(this.button_DEVICE);
             this.Controls.Add(this.button_USER);
             this.Name = "CLIENT";
-            this.Text = "QUẢN LÝ THẺ RFID - PTN KỸ THUẬT MÁY TÍNH";
+            this.Text = "QUẢN LÝ THẺ RFID - PHÒNG THÍ NGHIỆM KỸ THUẬT MÁY TÍNH";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CLIEN_FormClosing);
             this.ResumeLayout(false);
 
@@ -151,11 +151,12 @@
 
         #endregion
 
+        private System.Windows.Forms.Button button_but_CONFIG;
         private System.Windows.Forms.Button button_USER;
         private System.Windows.Forms.Button button_DEVICE;
-        private System.Windows.Forms.Button button_but_CONFIG;
         private System.Windows.Forms.Button button_BORROW_RETURN;
+        private System.Windows.Forms.Button button_try; 
         private System.Windows.Forms.Button button_Detail;
-        private System.Windows.Forms.Button button_try;
+        
     }
 }

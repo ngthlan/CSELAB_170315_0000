@@ -16,6 +16,15 @@ namespace CSELABMAN.VIEW
             InitializeComponent();
         }
 
+        #region Local Methods
+
+        private void VIEWDEV_FormClosing(object sender, FormClosingEventArgs e)
+        { 
+            
+        }
+        #endregion Local Methods
+
+        #region Button Clicks
         private void button_REGIS_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(this, "Đăng ký nhiều thẻ thiết bị mới ?", "ĐĂNG KÝ THẺ THIẾT BỊ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -47,8 +56,7 @@ namespace CSELABMAN.VIEW
                 DEVEDITLIT frmEDITLIT = new DEVEDITLIT();
                 frmEDITLIT.Show();
             }
-
         }
-
+        #endregion Button Clicks
     }
 }

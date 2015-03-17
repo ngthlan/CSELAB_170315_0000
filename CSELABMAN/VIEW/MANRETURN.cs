@@ -14,8 +14,37 @@ namespace CSELABMAN.VIEW
         public MANRETURN()
         {
             InitializeComponent();
+            textBox_UserName.Enabled = false;
+            textBox_DEVName.Enabled = false;
+            textBox_RFIDDEV.Enabled = false;
         }
 
+        private VIEWMAN parentVIEWMAN;                   // tham chieu tu form CHA
+        public void setVIEWMAN(VIEWMAN tmp)
+        {
+            parentVIEWMAN = tmp;
+        }
+
+        #region Local Methods
+        public void exit()
+        {
+            this.Close();
+        }
+
+        public void requesttoclose()
+        {   // lay tin hieu tat tu form CHA : neu dung thi tat, khong dung thi van mo 
+            DialogResult result = MessageBox.Show("Bạn thật sự muốn tắt ứng dụng?", "TRẢ THIẾT BỊ", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                parentVIEWMAN.RegisClosing("MANRETURN");
+                this.Close();
+            }
+        }
+
+        #endregion Local Methods
+
+        #region Button Clicks
         private void but_checkUSER_Click(object sender, EventArgs e)
         {
 
@@ -30,17 +59,37 @@ namespace CSELABMAN.VIEW
         {
             if (checkBox_RFID.Checked)
             {
-                textBox_UserName.Enabled = false;
-                textBox_DEVName.Enabled = false;
-                textBox_RFIDUser.Enabled = true;
-                textBox_RFIDDEV.Enabled = true;
+                if (checkBox_User.Checked)
+                {
+                    textBox_RFIDUser.Enabled = true;
+                    textBox_RFIDDEV.Enabled = false;
+                    textBox_UserName.Enabled = false;
+                    textBox_DEVName.Enabled = false;
+                }
+                else
+                {
+                    textBox_RFIDUser.Enabled = false;
+                    textBox_RFIDDEV.Enabled = true;
+                    textBox_UserName.Enabled = false;
+                    textBox_DEVName.Enabled = false;
+                }
             }
             else
             {
-                textBox_RFIDUser.Enabled = false;
-                textBox_RFIDDEV.Enabled = false;
-                textBox_UserName.Enabled = true;
-                textBox_DEVName.Enabled = true;
+                if (checkBox_User.Checked)
+                {
+                    textBox_RFIDUser.Enabled = false;
+                    textBox_RFIDDEV.Enabled = false;
+                    textBox_UserName.Enabled = true;
+                    textBox_DEVName.Enabled = false;
+                }
+                else
+                {
+                    textBox_RFIDUser.Enabled = false;
+                    textBox_RFIDDEV.Enabled = false;
+                    textBox_UserName.Enabled = false;
+                    textBox_DEVName.Enabled = true;
+                }
             }
         }
 
@@ -48,18 +97,39 @@ namespace CSELABMAN.VIEW
         {
             if (checkBox_User.Checked)
             {
-                textBox_RFIDDEV.Enabled = false;
-                textBox_DEVName.Enabled = false;
-                textBox_RFIDUser.Enabled = true;
-                textBox_UserName.Enabled = true;
+                if (checkBox_RFID.Checked)
+                {
+                    textBox_RFIDUser.Enabled = true;
+                    textBox_RFIDDEV.Enabled = false;
+                    textBox_UserName.Enabled = false;
+                    textBox_DEVName.Enabled = false;
+                }
+                else
+                {
+                    textBox_RFIDUser.Enabled = false;
+                    textBox_RFIDDEV.Enabled = false;
+                    textBox_UserName.Enabled = true;
+                    textBox_DEVName.Enabled = false;
+                }
             }
             else
             {
-                textBox_RFIDUser.Enabled = false;
-                textBox_UserName.Enabled = false;
-                textBox_RFIDDEV.Enabled = true;
-                textBox_DEVName.Enabled = true;
+                if (checkBox_RFID.Checked)
+                {
+                    textBox_RFIDUser.Enabled = false;
+                    textBox_RFIDDEV.Enabled = true;
+                    textBox_UserName.Enabled = false;
+                    textBox_DEVName.Enabled = false;
+                }
+                else
+                {
+                    textBox_RFIDUser.Enabled = false;
+                    textBox_RFIDDEV.Enabled = false;
+                    textBox_UserName.Enabled = false;
+                    textBox_DEVName.Enabled = true;
+                }
             }
         }
+        #endregion Button Clicks
     }
 }

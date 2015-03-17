@@ -411,17 +411,6 @@
             // 
             this.cmB_Baud.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmB_Baud.FormattingEnabled = true;
-            /*this.cmB_Baud.Items.AddRange(new object[] {
-            "300",
-            "600",
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "14400",
-            "28800",
-            "36000",
-            "115000"});*/
             this.cmB_Baud.Location = new System.Drawing.Point(67, 45);
             this.cmB_Baud.Name = "cmB_Baud";
             this.cmB_Baud.Size = new System.Drawing.Size(90, 21);
@@ -622,7 +611,7 @@
             this.Controls.Add(this.groupBox_COM);
             this.Controls.Add(this.groupBox_FILE);
             this.Name = "TRY";
-            this.Text = "TRY";
+            this.Text = "KIỂM TRA CÁC CHỨC NĂNG CƠ BẢN";
             this.groupBox_FILE.ResumeLayout(false);
             this.groupBox_FILE.PerformLayout();
             this.groupBox_COM.ResumeLayout(false);

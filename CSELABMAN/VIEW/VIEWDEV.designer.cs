@@ -73,6 +73,7 @@
             this.Controls.Add(this.button_REGIS);
             this.Name = "DEV";
             this.Text = "QUẢN LÝ THIẾT BỊ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VIEWDEV_FormClosing);
             this.ResumeLayout(false);
 
         }

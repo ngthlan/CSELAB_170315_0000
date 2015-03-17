@@ -42,12 +42,12 @@
             this.label_RFID = new System.Windows.Forms.Label();
             this.group_SETTINGS = new System.Windows.Forms.GroupBox();
             this.cmB_Parity = new System.Windows.Forms.ComboBox();
-            this.but_OpenPort = new System.Windows.Forms.Button();
             this.label_Parity = new System.Windows.Forms.Label();
             this.cmB_Baud = new System.Windows.Forms.ComboBox();
             this.label_Baud = new System.Windows.Forms.Label();
             this.cmB_COMport = new System.Windows.Forms.ComboBox();
             this.label_COMport = new System.Windows.Forms.Label();
+            this.but_OpenPort = new System.Windows.Forms.Button();
             this.group_STT = new System.Windows.Forms.GroupBox();
             this.textBox_sttCOM = new System.Windows.Forms.TextBox();
             this.label_sttServer = new System.Windows.Forms.Label();
@@ -133,6 +133,7 @@
             this.but_reset.TabIndex = 16;
             this.but_reset.Text = "Xóa thông tin";
             this.but_reset.UseVisualStyleBackColor = true;
+            this.but_reset.Click += new System.EventHandler(this.but_reset_Click);
             // 
             // label_LastName
             // 
@@ -194,15 +195,6 @@
             this.cmB_Parity.Size = new System.Drawing.Size(92, 21);
             this.cmB_Parity.TabIndex = 3;
             // 
-            // but_OpenPort
-            // 
-            this.but_OpenPort.Location = new System.Drawing.Point(12, 223);
-            this.but_OpenPort.Name = "but_OpenPort";
-            this.but_OpenPort.Size = new System.Drawing.Size(71, 22);
-            this.but_OpenPort.TabIndex = 25;
-            this.but_OpenPort.Text = "Open Port";
-            this.but_OpenPort.UseVisualStyleBackColor = true;
-            // 
             // label_Parity
             // 
             this.label_Parity.AutoSize = true;
@@ -258,6 +250,16 @@
             this.label_COMport.Size = new System.Drawing.Size(49, 13);
             this.label_COMport.TabIndex = 1;
             this.label_COMport.Text = "COMport";
+            // 
+            // but_OpenPort
+            // 
+            this.but_OpenPort.Location = new System.Drawing.Point(12, 223);
+            this.but_OpenPort.Name = "but_OpenPort";
+            this.but_OpenPort.Size = new System.Drawing.Size(71, 22);
+            this.but_OpenPort.TabIndex = 25;
+            this.but_OpenPort.Text = "Open Port";
+            this.but_OpenPort.UseVisualStyleBackColor = true;
+            this.but_OpenPort.Click += new System.EventHandler(this.but_OpenPort_Click);
             // 
             // group_STT
             // 
@@ -315,6 +317,7 @@
             this.but_Regis.TabIndex = 34;
             this.but_Regis.Text = "ĐĂNG KÍ MỚI";
             this.but_Regis.UseVisualStyleBackColor = true;
+            this.but_Regis.Click += new System.EventHandler(this.but_Regis_Click);
             // 
             // USERREGIS
             // 
@@ -334,6 +337,7 @@
             this.group_SETTINGS.PerformLayout();
             this.group_STT.ResumeLayout(false);
             this.group_STT.PerformLayout();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.USERREGIS_FormClosing);
             this.ResumeLayout(false);
 
         }

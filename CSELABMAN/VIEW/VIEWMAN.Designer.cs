@@ -69,8 +69,8 @@
             this.Controls.Add(this.button_BORROW);
             this.Name = "VIEWMAN";
             this.Text = "MƯỢN / TRẢ THIẾT BỊ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VIEWMAN_FormClosing);
             this.ResumeLayout(false);
-
         }
 
         #endregion
